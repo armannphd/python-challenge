@@ -1,86 +1,87 @@
-# First we'll import the os module
-# This will allow us to create file paths across operating systems
 import os
-
-# Module for reading CSV files
 import csv
 
-csvpath = os.path.join('python-challenge' , 'PyBank' , 'Resources' , 'budget_data.csv')
+csvpath = os.path.join('PyPoll/Resources/election_data.csv')
 
-profit_losses_list = []
-diff_btwn_month_list = []
-date_list = []
-
+# open csv file
 with open(csvpath) as csvfile:
 
     csvreader = csv.reader(csvfile, delimiter=',')
     csv_header = next(csvreader)
 
+    candidates = []
     for row in csvreader:
-        profit_losses_list.append(int(row[1]))
-        
-# need to create a Date list in order to return the max and min values later
+        candidates.append(row[2])
 
-        date_list.append(row[0])
+# establish a set to get unique values, then assign each value in the set a variable
+    candidate_names = set(candidates)
+    c1, c2, c3 = candidate_names
 
-    net_total = sum(profit_losses_list)
-    total_months = (len(profit_losses_list))
+# establish a function to count the number of times a specific candidate's name appears 
+# in the candidate list
+    def countif(lst, what_to_count_in_the_lst):
+        count = 0
+        for value in lst:
+            if (value == what_to_count_in_the_lst):
+                count += 1
+        return count
  
-# subtract 1 as calculation begins with second month subtracted from first month
+c1_votes = countif(candidates, c1)
+c2_votes = countif(candidates, c2)
+c3_votes = countif(candidates, c3)
 
-for x in range(total_months - 1):
+Total_votes = c1_votes + c2_votes + c3_votes
 
-# x+1 as taking the second value in  the list and stracting from previous value
+percent_vote_c1 = c1_votes / Total_votes
+percent_vote_c2 = c2_votes / Total_votes
+percent_vote_c3 = c3_votes / Total_votes
 
-    diff_btwn_months = (profit_losses_list[x+1]) - (profit_losses_list[x])
+winning_votecount = max(c1_votes, c2_votes, c3_votes)
 
-# create a new list with values of differences between consecutive months
+if winning_votecount == c1_votes:
+    winner = c1
+elif winning_votecount == c2_votes:
+    winner = c2
+else:
+    winner = c3
+# #_______________________________________________________________________________
 
-    diff_btwn_month_list.append(diff_btwn_months)
-    
-# sum up all the differences between consecutive months
+print('Election Results')
+print('--------------------------------------------')
 
-    change_in_pl = sum(diff_btwn_month_list)
+# note the formatting to get the comma separator for numbers
 
-# need to subtract 1 as start with second month subtracted from first month
+print("Total Votes:" , "{:,}".format(Total_votes))
+print('--------------------------------------------')
 
-    avg_change_in_pl = change_in_pl / (total_months - 1)
-
-    max_month_profits_value = max(diff_btwn_month_list)
-    min_month_profits_value = min(diff_btwn_month_list)
-
-# index of the max month is against a month list that is off by one, thus add 1
-
-    index_max_month = (diff_btwn_month_list.index(max_month_profits_value)+1)
-    index_min_month = (diff_btwn_month_list.index(min_month_profits_value)+1)
-    max_month = (date_list[index_max_month])
-    min_month = (date_list[index_min_month])
-    
-# #_______________________________________________________________________________________________________________________________________________________________________________
-# Create a function to print all the final results
-# Need a for statement before the function is defined
-
-for a in csvpath:
-    def final_results(a):
-
-        print("Financial Analysis")
-        print('------------------------------------------')
-
-        print("Total Months:" ,total_months)
-        print("Total:" ,'${:,.2f}'.format(net_total))
-        print("Average Change:",'${:,.2f}'.format(avg_change_in_pl))
+# note the formatting to get the percentage formatting to 3 decimals
 
 
-        print("Greatest Increase in Profits:",max_month,"(",'${:,.2f}'.format(max_month_profits_value),")")
-        print("Greatest Decrease in Profits:",min_month,"(",'${:,.2f}'.format(min_month_profits_value),")")
+print(c1, ":" , "{:.3%}".format(percent_vote_c1), "(" , "{:,}".format(c1_votes), ")")
+print()
+print(c2, ":" , "{:.3%}".format(percent_vote_c2), "(" , "{:,}".format(c2_votes), ")")
+print()
+print(c3, ":" , "{:.3%}".format(percent_vote_c3), "(" , "{:,}".format(c3_votes), ")")
+print('--------------------------------------------')
+print('Winner:', winner)
 
-final_results(a)
-# #_______________________________________________________________________________________________________________________________________________________________________________
+# # #_______________________________________________________________________________
+
+# Code to write a separate text file of the results
 import sys
+original_stdout = sys.stdout
 
-output_path = os.path.join('python-challenge' , 'PyBank' , 'analysis' , 'PyBank_output.txt')
-
-# Open the file using "write" mode. Specify the variable to hold the contents
-with open(output_path, 'w') as csvfile:
-    sys.stdout = csvfile 
-    final_results(a)
+with open('PyPoll/analysis/PyPoll_Output.txt', 'w') as f:
+    sys.stdout = f 
+    print('Election Results')
+    print('--------------------------------------------')
+    print("Total Votes:" , "{:,}".format(Total_votes))
+    print('--------------------------------------------')
+    print(c1, ":" , "{:.3%}".format(percent_vote_c1), "(" , "{:,}".format(c1_votes), ")")
+    print()
+    print(c2, ":" , "{:.3%}".format(percent_vote_c2), "(" , "{:,}".format(c2_votes), ")")
+    print()
+    print(c3, ":" , "{:.3%}".format(percent_vote_c3), "(" , "{:,}".format(c3_votes), ")")
+    print('--------------------------------------------')
+    print('Winner:', winner)
+    sys.stdout = original_stdout 
