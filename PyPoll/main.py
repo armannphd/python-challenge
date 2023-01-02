@@ -1,7 +1,14 @@
+# First we'll import the os module
+# This will allow us to create file paths across operating systems
 import os
+
+# Module for reading CSV files
 import csv
 
 csvpath = os.path.join('PyPoll/Resources/election_data.csv')
+
+# setting up the lists
+candidates = []
 
 # open csv file
 with open(csvpath) as csvfile:
@@ -9,7 +16,6 @@ with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     csv_header = next(csvreader)
 
-    candidates = []
     for row in csvreader:
         candidates.append(row[2])
 

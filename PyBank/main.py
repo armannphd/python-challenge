@@ -7,6 +7,7 @@ import csv
 
 csvpath = os.path.join('PyBank/resources/budget_data.csv')
 
+# setting up the lists
 profit_losses_list = []
 diff_btwn_month_list = []
 date_list = []
