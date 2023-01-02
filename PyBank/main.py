@@ -5,7 +5,7 @@ import os
 # Module for reading CSV files
 import csv
 
-csvpath = os.path.join('python-challenge' , 'PyBank' , 'Resources' , 'budget_data.csv')
+csvpath = os.path.join('PyBank/resources/budget_data.csv')
 
 profit_losses_list = []
 diff_btwn_month_list = []
@@ -78,7 +78,7 @@ final_results(a)
 # #_______________________________________________________________________________________________________________________________________________________________________________
 import sys
 
-output_path = os.path.join('python-challenge' , 'PyBank' , 'analysis' , 'PyBank_output.txt')
+output_path = os.path.join('PyBank/analysis/PyBank_Output.txt')
 
 # Open the file using "write" mode. Specify the variable to hold the contents
 with open(output_path, 'w') as csvfile:
