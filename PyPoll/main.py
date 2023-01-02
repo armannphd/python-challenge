@@ -46,25 +46,29 @@ else:
     winner = c3
 # #_______________________________________________________________________________
 
-print('Election Results')
-print('--------------------------------------------')
+for a in csvpath:
+    def final_results(a):
+        
+        print('Election Results')
+        print('--------------------------------------------')
 
-# note the formatting to get the comma separator for numbers
+        # note the formatting to get the comma separator for numbers
 
-print("Total Votes:" , "{:,}".format(Total_votes))
-print('--------------------------------------------')
+        print("Total Votes:" , "{:,}".format(Total_votes))
+        print('--------------------------------------------')
 
-# note the formatting to get the percentage formatting to 3 decimals
+        # note the formatting to get the percentage formatting to 3 decimals
 
 
-print(c1, ":" , "{:.3%}".format(percent_vote_c1), "(" , "{:,}".format(c1_votes), ")")
-print()
-print(c2, ":" , "{:.3%}".format(percent_vote_c2), "(" , "{:,}".format(c2_votes), ")")
-print()
-print(c3, ":" , "{:.3%}".format(percent_vote_c3), "(" , "{:,}".format(c3_votes), ")")
-print('--------------------------------------------')
-print('Winner:', winner)
+        print(c1, ":" , "{:.3%}".format(percent_vote_c1), "(" , "{:,}".format(c1_votes), ")")
+        print()
+        print(c2, ":" , "{:.3%}".format(percent_vote_c2), "(" , "{:,}".format(c2_votes), ")")
+        print()
+        print(c3, ":" , "{:.3%}".format(percent_vote_c3), "(" , "{:,}".format(c3_votes), ")")
+        print('--------------------------------------------')
+        print('Winner:', winner)
 
+final_results(a)
 # # #_______________________________________________________________________________
 
 # Code to write a separate text file of the results
@@ -73,15 +77,6 @@ original_stdout = sys.stdout
 
 with open('PyPoll/analysis/PyPoll_Output.txt', 'w') as f:
     sys.stdout = f 
-    print('Election Results')
-    print('--------------------------------------------')
-    print("Total Votes:" , "{:,}".format(Total_votes))
-    print('--------------------------------------------')
-    print(c1, ":" , "{:.3%}".format(percent_vote_c1), "(" , "{:,}".format(c1_votes), ")")
-    print()
-    print(c2, ":" , "{:.3%}".format(percent_vote_c2), "(" , "{:,}".format(c2_votes), ")")
-    print()
-    print(c3, ":" , "{:.3%}".format(percent_vote_c3), "(" , "{:,}".format(c3_votes), ")")
-    print('--------------------------------------------')
-    print('Winner:', winner)
-    sys.stdout = original_stdout 
+    final_results(a)
+
+    
