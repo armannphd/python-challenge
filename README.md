@@ -18,6 +18,7 @@
 # Images of the results for each main.py once executed are shown below
 
 ![Img_PyPoll](https://user-images.githubusercontent.com/115322974/210433992-8fe854f3-8ac8-48a6-a225-66f293f6c592.png)
+![Img_PyPollReal](https://user-images.githubusercontent.com/115322974/210434792-7fb37a60-2ceb-4a7d-b15c-9e480a1cf559.png)
 
 # _____________________________________________________
 # END OF PYTHON-CHALLENGE
