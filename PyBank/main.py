@@ -15,6 +15,9 @@ date_list = []
 with open(csvpath) as csvfile:
 
     csvreader = csv.reader(csvfile, delimiter=',')
+
+# to account for the header within the CSV file
+
     csv_header = next(csvreader)
 
     for row in csvreader:
