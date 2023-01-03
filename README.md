@@ -15,5 +15,11 @@
 
 # The 'analysis' folder within the 'PyPoll' folder, should have a file named 'PyPoll_Output.txt' once the code in the 'main.py' is run.
 
+# Images of the results for each main.py once executed are shown below
+
 # _____________________________________________________
 # END OF PYTHON-CHALLENGE
+
+# [Alt text](../../../../Pic_PyPoll_Output.png)
+
+# [Alt text](../../../../Pic_PyBank_Output.png)
