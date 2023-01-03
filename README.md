@@ -19,7 +19,3 @@
 
 # _____________________________________________________
 # END OF PYTHON-CHALLENGE
-
-# [Alt text](../../../../Pic_PyPoll_Output.png)
-
-# [Alt text](../../../../Pic_PyBank_Output.png)
