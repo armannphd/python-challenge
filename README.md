@@ -1,16 +1,19 @@
 # PYTHON-CHALLENGE
 # _____________________________________________________
 
-
-# Within this 'python-challenge' folder, there is a 'PyBank' and 'PyPoll' folder, and  this README file
+# Within the main 'python-challenge' folder, there is a 'PyBank' and 'PyPoll' folder, and  this README file
 
 # Within either the 'PyBank' or 'PyPoll' folder, there is an 'analysis' folder, a 'resources' folder, and a file named 'main.py'
 
-# The 'main.py' file, when run in either 'PyBank' or 'PyPoll' should yield an analysis of the csv file within the 'resources' folder 'PyBank' folder contains 'budget_data.csv' inside of its 'resources' folder and 'PyPoll' contains 'election_data.csv' inside of its 'resources' folder.  Additionally, in each 'analysis' folder, the results should be saved as a new txt file once the 'main.py' file is run.  
+# The 'PyBank' folder contains 'budget_data.csv' inside of its 'resources' folder and 'PyPoll' contains 'election_data.csv' inside of its 'resources' folder.  
 
-# Within the 'analysis' folder within the 'PyBank' folder, there should be a file named 'PyBank_Output.txt' once the code in the 'main.py' is run.
+# The 'main.py' file, when run in either 'PyBank' or 'PyPoll' should yield an analysis of the csv file within the 'resources' folder.
 
-# Within the 'analysis' folder within the 'PyPoll' folder, there should be a file named 'PyPoll_Output.txt' once the code in the 'main.py' is run.
+# In each 'analysis' folder, the results should be saved as a new txt file once the 'main.py' file is run.  
+
+# The 'analysis' folder within the 'PyBank' folder, should have a file named 'PyBank_Output.txt' once the code in the 'main.py' is run.
+
+# The 'analysis' folder within the 'PyPoll' folder, should have a file named 'PyPoll_Output.txt' once the code in the 'main.py' is run.
 
 # _____________________________________________________
 # END OF PYTHON-CHALLENGE
