@@ -1,5 +1,5 @@
 # PYTHON-CHALLENGE
-# _______________________________________________________________________________________________
+# _____________________________________________________________
 
 
 # Within this 'python-challenge' folder, there is a 'PyBank' and 'PyPoll' folder, and  this README file
@@ -12,6 +12,6 @@
 
 # Within the 'analysis' folder within the 'PyPoll' folder, there should be a file named 'PyPoll_Output.txt' once the code in the 'main.py' is run.
 
-# _______________________________________________________________________________________________
+# _____________________________________________________________
 
 # END OF PYTHON-CHALLENGE
