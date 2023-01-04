@@ -5,7 +5,7 @@ import os
 # Module for reading CSV files
 import csv
 
-csvpath = os.path.join('PyPoll/Resources/election_data.csv')
+csvpath = os.path.join('Resources/election_data.csv')
 
 # setting up the lists
 candidates = []
@@ -81,7 +81,7 @@ final_results(a)
 import sys
 original_stdout = sys.stdout
 
-with open('PyPoll/analysis/PyPoll_Output.txt', 'w') as f:
+with open('analysis/PyPoll_Output.txt', 'w') as f:
     sys.stdout = f 
     final_results(a)
 
