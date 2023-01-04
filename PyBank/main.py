@@ -5,7 +5,13 @@ import os
 # Module for reading CSV files
 import csv
 
-csvpath = os.path.join('PyBank/resources/budget_data.csv')
+# csvpath = os.path.join('PyBank/resources/budget_data.csv')
+csvpath = os.path.join('resources' , 'budget_data.csv')
+# csvpath = os.path.join('PyBank' , 'resources' , 'budget_data.csv')
+# csvpath = os.path.join('/Users/a/Desktop/ClassFolder/Module03/Module03_Challenge/python-challenge/PyBank/Resources/budget_data.csv')
+# csvpath = os.path.join('..' , 'PyBank', 'resources' , 'budget_data.csv')
+
+
 
 # setting up the lists
 profit_losses_list = []
