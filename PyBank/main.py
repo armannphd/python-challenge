@@ -88,7 +88,7 @@ final_results(a)
 # #_______________________________________________________________________________________________________________________________________________________________________________
 import sys
 
-output_path = os.path.join('PyBank/analysis/PyBank_Output.txt')
+output_path = os.path.join('analysis' , 'budget_data.csv'')
 
 # Open the file using "write" mode. Specify the variable to hold the contents
 with open(output_path, 'w') as csvfile:
