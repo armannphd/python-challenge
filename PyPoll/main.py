@@ -54,7 +54,8 @@ else:
 
 for a in csvpath:
     def final_results(a):
-        
+        print()
+        print()
         print('Election Results')
         print('--------------------------------------------')
 
@@ -73,6 +74,8 @@ for a in csvpath:
         print(c3, ":" , "{:.3%}".format(percent_vote_c3), "(" , "{:,}".format(c3_votes), ")")
         print('--------------------------------------------')
         print('Winner:', winner)
+        print()
+        print()
 
 final_results(a)
 # # #________________________________________________________________________________
