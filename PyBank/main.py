@@ -66,7 +66,9 @@ for x in range(total_months - 1):
 
 for a in csvpath:
     def final_results(a):
-
+        
+        print()
+        print()
         print("Financial Analysis")
         print('------------------------------------------')
 
@@ -77,6 +79,8 @@ for a in csvpath:
 
         print("Greatest Increase in Profits:",max_month,"(",'${:,.2f}'.format(max_month_profits_value),")")
         print("Greatest Decrease in Profits:",min_month,"(",'${:,.2f}'.format(min_month_profits_value),")")
+        print()
+        print()
 
 final_results(a)
 # #_______________________________________________________________________________________________________________________________________________________________________________
